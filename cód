@@ -1,0 +1,25 @@
+def calculadora(operação,num1,num2):
+    if operação == 'soma':
+        return num1 + num2
+    elif operação == 'subtração':
+        return num1 - num2
+    elif operação == 'multiplicação':
+        return num1 * num2
+    elif operação == 'divisão':
+        return num1 / num2
+    else:
+        return 'Operação inválida!'
+num1 = float(input('Digite  o primeiro numero: '))
+num2 = float(input('Digite o segundo numero:'))
+operação = input('Digite a operação  (soma,subtração,multiplicação,divisão): ' )
+resultado = calculadora(operação, num1, num2)
+print('O resultado é: ', resultado)
+continuar = input('Deseja continuar?')
+if continuar.lower() == 'sim':
+    num1 = float(input('Digite  o primeiro numero: '))
+    num2 = float(input('Digite o segundo numero:'))
+    operação = input('Digite a operação  (soma,subtração,multiplicação,divisão): ' )
+    resultado = calculadora(operação, num1, num2)
+    print('O resultado é: ', resultado)
+else:
+    print('Calculadora finalizada!')
